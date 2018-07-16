@@ -11,76 +11,65 @@
   </head>
   <body>
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-
-    <main role="main">
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">Hello, world!</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-        </div>
-      </div>
-
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div>
-        </div>
-
-        <hr>
-
-      </div> <!-- /container -->
-
-    </main>
-
+	<form id="contact-form" method="post" action="https://us-central1-personal-portfolio-210404.cloudfunctions.net/portfolioContactForm" role="form">
+	
+	    <div class="messages"></div>
+	
+	    <div class="controls">
+	
+	        <div class="row">
+	            <div class="col-md-6">
+	                <div class="form-group">
+	                    <label for="form_name">Firstname *</label>
+	                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+	                    <div class="help-block with-errors"></div>
+	                </div>
+	            </div>
+	            <div class="col-md-6">
+	                <div class="form-group">
+	                    <label for="form_lastname">Lastname *</label>
+	                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+	                    <div class="help-block with-errors"></div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-6">
+	                <div class="form-group">
+	                    <label for="form_email">Email *</label>
+	                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+	                    <div class="help-block with-errors"></div>
+	                </div>
+	            </div>
+	            <div class="col-md-6">
+	                <div class="form-group">
+	                    <label for="form_phone">Phone</label>
+	                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+	                    <div class="help-block with-errors"></div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-12">
+	                <div class="form-group">
+	                    <label for="form_message">Message *</label>
+	                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+	                    <div class="help-block with-errors"></div>
+	                </div>
+	            </div>
+	            <div class="col-md-12">
+	                <input type="submit" class="btn btn-success btn-send" value="Send message">
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-12">
+	                <p class="text-muted"><strong>*</strong> These fields are required. Contact form template by <a href="http://bootstrapious.com" target="_blank">Bootstrapious</a>.</p>
+	            </div>
+	        </div>
+	    </div>
+	
+	</form>
+	
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
